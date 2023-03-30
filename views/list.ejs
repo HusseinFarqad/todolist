@@ -1,0 +1,41 @@
+<%- include("header") %>
+<a href="/">home</a>
+<a href="/Sun">Sun</a>
+<a href="/Mon">Mon</a>
+<a href="/Tus">Tus</a>
+<a href="/Wen">Wen</a>
+<a href="/Thr">Thr</a>
+<a href="/Fri">Fri</a>
+<a href="/Sat">Sat</a>
+<div class="box" id="heading">
+  <h1><%= listTitle %></h1>
+</div>
+
+<div class="box">
+  <% newListItems.forEach(function(item) { %>
+  <form action="/delete" method="post">
+    <div class="item">
+      <input
+        type="checkbox"
+        name="checkbox"
+        value="<%= item._id %>"
+        onChange="this.form.submit()"
+      />
+      <p><%= item.name %></p>
+    </div>
+    <input type="hidden" name="namelist" value="<%= listTitle %>" />
+  </form>
+  <% }) %>
+
+  <form class="item" action="/" method="post">
+    <input
+      type="text"
+      name="newItem"
+      placeholder="New Item"
+      autocomplete="off"
+    />
+    <button type="submit" name="list" value="<%= listTitle %>">+</button>
+  </form>
+</div>
+
+<%- include("footer") %>

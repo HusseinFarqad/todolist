@@ -1,0 +1,15 @@
+<%- include("header") %>
+
+<h1>Doctor Clinic</h1>
+
+<form action="/else/year" method="post">
+  <label for="yearId">Enter a year: </label>
+  <input type="number" name="year" id="yearId" />
+  <button type="submit">Check</button>
+</form>
+
+<div>
+  <h3><%= response %></h3>
+</div>
+
+<%- include("header") %>

@@ -1,0 +1,11 @@
+# Dependency directories
+node_modules
+__MACOSX
+ARCHIVE
+node_modules
+
+# Logs
+*.log
+
+# API keys
+.env*
