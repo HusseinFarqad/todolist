@@ -98,3 +98,36 @@ footer {
 #aboutHeader {
   color: burlywood;
 }
+
+.block {
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#item {
+  font-size: 30px;
+  font-family: 'BioRhyme', serif;
+  width: initial;
+  height: 40px;
+  line-height: 40px;
+}
+
+
+#highlight {
+  display: inline-block;
+  position: absolute;
+  z-index: -1;
+  background-color: #F2BB05;
+  height: 40px;
+  width: 0%;
+  transition: width 0.5s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#item:hover #highlight {
+  /* hardcoded */
+  width: 320px;
+}
